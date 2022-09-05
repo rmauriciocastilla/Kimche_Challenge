@@ -1,6 +1,7 @@
 import React,{ useState } from 'react';
 import { Continents } from '../Continents/Continents';
 import { Languages } from '../Languages/Languages';
+import './Search.css';
 
 export const Search = ({countries}) => {
     const [allCountries,setAllCountries] = useState(countries);
@@ -21,8 +22,11 @@ export const Search = ({countries}) => {
     }
     return(
         <div>
-            <input value={search} onChange={handleChange}/>
-            <div>
+            <div className='input-container'>
+                <input value={search} onChange={handleChange} placeholder='Search a country' />
+                <i className="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div className='groupBy-container'>
                 <h2>Group By:</h2>
                 <div>
                     <button onClick={()=>setFilter('language')}>Language</button>
