@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { gql, useQuery } from '@apollo/client';
+import { Search } from './components/Search/Search';
 
 const ALL_COUNTRIES = gql`
   query {
@@ -35,15 +36,12 @@ function App() {
   if(error) return <span style='color: red'>{error}</span>
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          {loading ? <p>loading</p> :(
-            <>
-            <p> GraphQL + React </p>
-            {data && data.countries.map(c=>c.name).join(', ')}
-            </>
-            )}
-      </header>
+      {loading ? <p>loading</p> :(
+        <div>
+          <h1>Countries</h1>
+          {data && <Search countries={data.countries}/>}
+        </div>
+      )}
     </div>
   );
 }
