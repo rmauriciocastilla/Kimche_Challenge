@@ -4,8 +4,6 @@ import { Continent } from '../Continent/Continent';
 export const Continents = ({filterCountries}) => {
     const setContinents = new Set();
     filterCountries.forEach(c=>setContinents.add(c.continent.name))
-    console.log(filterCountries)
-
     return (
         <div>{Array.from(setContinents).map(cont=>(
             <Continent

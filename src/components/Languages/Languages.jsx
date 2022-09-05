@@ -1,10 +1,15 @@
 import React from 'react'
+import { Language } from '../Language/Language';
 
 export const Languages = ({filterCountries}) => {
     const setLanguages = new Set();
     filterCountries.forEach(c=>c.languages.forEach(l=>setLanguages.add(l.name)))
-    console.log(filterCountries)
     return (
-        <div>{Array.from(setLanguages).join(', ')}</div>
+        <div>{Array.from(setLanguages).map(lang=>(
+          <Language
+          language={lang}
+          countries={filterCountries.filter(c=>c.languages.find(l=>l.name===lang))}
+          />
+        ))}</div>
     )
 }

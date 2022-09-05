@@ -1,12 +1,15 @@
 import React from 'react'
-
+import { Country } from '../Country/Country';
 export const Continent = ({continent, countries}) => {
-    console.log('Continent:',continent);
-    console.log('Countries:',countries);
     return (
         <div>
             <h2>{continent}</h2>
             <div>
+                {countries.map(c=>(
+                    <Country
+                        data={c}
+                    />
+                ))}
             </div>
         </div>
     )

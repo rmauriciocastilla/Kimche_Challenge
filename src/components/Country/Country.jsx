@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Country = () => {
+export const Country = ({data}) => {
   return (
-    <div>Country</div>
+    <div>{data.name}</div>
   )
 }

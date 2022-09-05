@@ -38,7 +38,8 @@ function App() {
     <div className="App">
       {loading ? <p>loading</p> :(
         <div>
-          <h1>Countries</h1>
+          <h1>Country Search</h1>
+          <p>Obtain information from all the countries of the world.</p>
           {data && <Search countries={data.countries}/>}
         </div>
       )}
