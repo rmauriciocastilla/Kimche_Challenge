@@ -8,6 +8,8 @@ export const Continents = ({filterCountries}) => {
         <div>{Array.from(setContinents).map(cont=>(
             <Continent
                 continent={cont}
+                key={cont}
+                id={cont}
                 countries={filterCountries.filter(country=>country.continent.name===cont)}
             />
         ))}</div>

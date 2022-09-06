@@ -1,0 +1,15 @@
+.country{
+    border: 2px solid black;
+    margin: 5px 0px;
+    padding: 5px;
+
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+  
+img {
+    width: 3vw;
+    object-fit: cover;
+  }

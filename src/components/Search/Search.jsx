@@ -29,8 +29,8 @@ export const Search = ({countries}) => {
             <div className='groupBy-container'>
                 <h2>Group By:</h2>
                 <div>
-                    <button onClick={()=>setFilter('language')}>Language</button>
-                    <button onClick={()=>setFilter('continent')}>Continent</button>
+                    <button onClick={()=>setFilter('language')} className={filter==='language'?'active-groupBy-button':'groupBy-button'}>Language</button>
+                    <button onClick={()=>setFilter('continent')} className={filter==='continent'?'active-groupBy-button':'groupBy-button'}>Continent</button>
                 </div>
             </div>
             {

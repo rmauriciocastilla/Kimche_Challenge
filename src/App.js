@@ -1,6 +1,6 @@
-import './App.css';
 import { gql, useQuery } from '@apollo/client';
 import { Search } from './components/Search/Search';
+import './App.css';
 
 const ALL_COUNTRIES = gql`
   query {
@@ -9,6 +9,7 @@ const ALL_COUNTRIES = gql`
       name
       native
       phone
+      capital
       continent{
         code
         name

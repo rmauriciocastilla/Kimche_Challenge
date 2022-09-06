@@ -8,6 +8,8 @@ export const Languages = ({filterCountries}) => {
         <div>{Array.from(setLanguages).map(lang=>(
           <Language
           language={lang}
+          id={lang}
+          key={lang}
           countries={filterCountries.filter(c=>c.languages.find(l=>l.name===lang))}
           />
         ))}</div>
