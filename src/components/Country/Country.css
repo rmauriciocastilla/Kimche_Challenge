@@ -1,15 +1,35 @@
 .country{
     border: 2px solid black;
-    margin: 5px 0px;
-    padding: 5px;
-
-    border-radius: 20px;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    margin: 10px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    text-align: left;
 }
 
-  
+@media (min-width: 500px) {
+    .country{
+        border: 2px solid black;
+        margin: 10px 10px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 30vw;
+        height: 20vw;
+        text-align: left;
+    }
+}
 img {
-    width: 3vw;
+    width: 9vw;
+    height: 6vw;
     object-fit: cover;
-  }
+}
+
+.flex-title{
+    display: flex;
+    align-items: flex-start;
+}
+
+span{
+    font-style: italic;
+}

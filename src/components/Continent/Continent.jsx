@@ -1,10 +1,12 @@
 import React from 'react'
 import { Country } from '../Country/Country';
+import './Continent.css'
+
 export const Continent = ({continent, countries}) => {
     return (
         <div>
             <h2>{continent}</h2>
-            <div>
+            <div className='country-continent'>
                 {countries.map((c,i)=>(
                     <Country
                         data={c}

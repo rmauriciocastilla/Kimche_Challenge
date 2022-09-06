@@ -5,3 +5,14 @@
     justify-content: center;
     text-align: center;
 }
+
+@media (min-width: 500px) {
+    .country-language{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        text-align: center;
+    }
+}

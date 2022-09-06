@@ -1,20 +1,17 @@
 import React from 'react'
 import './Country.css';
 import {findFlagUrlByCountryName} from 'country-flags-svg';
+import imageNotFound from './imageNotFound.jpg';
 
 export const Country = ({data}) => {
   const url = findFlagUrlByCountryName(data.name)
-  console.log(url)
   return (
     <div className='country'>
-      <div className='flex-title'>
-        <img src={url} alt={`${data.name} flag`}/>
-        <h4>{data.name}, {data.code}</h4>
-      </div>
-      <span>{data.native}</span>
-      <p>Capital: {data.capital}</p>
-      <p>Currency: {data.currency}</p>
-      <p>Calling code: +{data.phone}</p>
+      <h3><img src={url?url:imageNotFound}/> {data.name}, {data.code}</h3>
+      <span>📢{data.native}</span>
+      <p>🏙 Capital: {data.capital?data.capital:'Not Found😥'}</p>
+      <p>💲 Currency: {data.currency?data.currency:'Not Found😥'}</p>
+      <p>📲 Calling code: +{data.phone}</p>
     </div>
   )
 }
