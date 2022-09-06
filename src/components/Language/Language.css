@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 800px) {
     .country-language{
         display: flex;
         justify-content: center;

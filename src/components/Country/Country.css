@@ -8,22 +8,27 @@
     text-align: left;
 }
 
-@media (min-width: 500px) {
+img {
+    width: 30px;
+    height: 20px;
+}
+
+@media (min-width: 800px) {
     .country{
         border: 2px solid black;
         margin: 10px 10px;
         border-radius: 10px;
         padding: 10px;
         width: 30vw;
-        height: 20vw;
+        height: 18vw;
         text-align: left;
     }
+    img {
+        width: 3vw;
+        height: 2vw;
+    }
 }
-img {
-    width: 9vw;
-    height: 6vw;
-    object-fit: cover;
-}
+
 
 .flex-title{
     display: flex;
