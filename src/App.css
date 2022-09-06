@@ -5,8 +5,9 @@
 }
 
 body{
-  background-color: #E2F7FF;
+  background-color: #f7f6f6;
 }
+
 
 .app{
   width: 90vw;
@@ -18,5 +19,25 @@ body{
   text-align: center;
   padding: 5px 10px;
   border-radius: 10px;
-  margin: 10px auto;
+  margin: 0px auto auto 0px;
 }
+
+.title-p{
+  font-size: 1.25rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+.center-img{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: auto;
+}
+
+.loading{
+  width: 80vw;
+  height: 60vw;
+}
+

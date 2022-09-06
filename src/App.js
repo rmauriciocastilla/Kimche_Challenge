@@ -1,6 +1,7 @@
 import { gql, useQuery } from '@apollo/client';
 import { Search } from './components/Search/Search';
 import './App.css';
+import loadingImage from './loading.gif';
 
 const ALL_COUNTRIES = gql`
   query {
@@ -36,9 +37,10 @@ function App() {
   if(error) return <span style='color: red'>{error}</span>
   return (
     <div className='app'>
-      {loading ? <p>loading</p> :(
+      {loading ?<div className='center-img'><img className='loading'src={loadingImage}/></div> :(
         <div className='container-app'>
           <h1 className='title'>Country Search</h1>
+          <p className='title-p'>The best place to search</p>
           {data && <Search countries={data.countries}/>}
         </div>
       )}
