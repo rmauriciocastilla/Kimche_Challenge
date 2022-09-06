@@ -6,6 +6,7 @@
     width: 100%;
     height: auto;
     text-align: left;
+    background-color: white;
 }
 
 img {
@@ -13,7 +14,7 @@ img {
     height: 20px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 925px) {
     .country{
         border: 2px solid black;
         margin: 10px 10px;
@@ -22,6 +23,7 @@ img {
         width: 30vw;
         height: 18vw;
         text-align: left;
+        background-color: white;
     }
     img {
         width: 3vw;

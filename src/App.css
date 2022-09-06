@@ -4,6 +4,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+body{
+  background-color: #E2F7FF;
+}
+
 .app{
   width: 90vw;
   margin: 0px auto;

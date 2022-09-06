@@ -6,7 +6,15 @@
     text-align: center;
 }
 
-@media (min-width: 800px) {
+.title-language{
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+@media (min-width: 925px) {
     .country-language{
         display: flex;
         justify-content: center;

@@ -5,7 +5,7 @@ export const Language = ({language,countries}) => {
 
     return (
     <div>
-        <h2>{language}</h2>
+        <h2 className='title-language'>{language}</h2>
         <div className='country-language'>{
             countries.map((c,i)=>(
                 <Country
