@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import dotenv from 'dotenv';
 import { ApolloClient, HttpLink, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+dotenv.config();
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
   link: new HttpLink({
-    uri: 'https://countries.trevorblades.com'
+    uri: `${process.env.URI_LINK}`
   })
 });
 
