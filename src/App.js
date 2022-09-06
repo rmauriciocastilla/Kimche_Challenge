@@ -34,10 +34,10 @@ const ALL_COUNTRIES = gql`
 
 function App() {
   const {data,error,loading} = useQuery(ALL_COUNTRIES);
-  if(error) return <span style='color: red'>{error}</span>
+  if(error) return <span style={{color:'red'}}>{error}</span>
   return (
     <div className='app'>
-      {loading ?<div className='center-img'><img className='loading'src={loadingImage}/></div> :(
+      {loading ?<div className='center-img'><img className='loading'alt='loading gif' src={loadingImage}/></div> :(
         <div className='container-app'>
           <h1 className='title'>Country Search</h1>
           <p className='title-p'>The best place to search</p>

@@ -7,7 +7,7 @@ export const Country = ({data}) => {
   const url = findFlagUrlByCountryName(data.name)
   return (
     <div className='country'>
-      <h3><img src={url?url:imageNotFound}/> {data.name}, {data.code}</h3>
+      <h3><img src={url?url:imageNotFound} alt={data.name}/> {data.name}, {data.code}</h3>
       <span>📢{data.native}</span>
       <p>🏙 Capital: {data.capital?data.capital:'Not Found😥'}</p>
       <p>💲 Currency: {data.currency?data.currency:'Not Found😥'}</p>

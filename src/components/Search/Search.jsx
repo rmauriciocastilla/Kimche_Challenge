@@ -4,7 +4,6 @@ import { Languages } from '../Languages/Languages';
 import './Search.css';
 
 export const Search = ({countries}) => {
-    const [allCountries,setAllCountries] = useState(countries);
     const [filterCountries,setFilterCountries] = useState([]);
     const [search,setSearch] = useState('');
     const [filter,setFilter] = useState('language');
@@ -17,7 +16,7 @@ export const Search = ({countries}) => {
             setFilterCountries([])
         }else{
             regExp = new RegExp(e.target.value.trim(),'i');
-            setFilterCountries(allCountries.filter(c=>regExp.test(c.name)))
+            setFilterCountries(countries.filter(c=>regExp.test(c.name)))
         }
     }
     return(
